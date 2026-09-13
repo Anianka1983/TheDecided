@@ -58,7 +58,7 @@ p:last-child{margin-bottom:0}
 .mark{display:flex;flex-direction:column;align-items:stretch;gap:.34rem;text-decoration:none;line-height:1}
 .mark-name{font-family:var(--mark);font-weight:400;font-size:clamp(1.15rem,3.2vw,1.7rem);letter-spacing:.26em;color:var(--navy);margin-right:-.26em}
 .mark-name b{color:var(--rose);font-weight:400}
-.mark-sub{font-family:var(--body);font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);white-space:nowrap;text-align:center;transform:translateX(-2%)}
+.mark-sub{font-family:var(--body);font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:#C4882F;white-space:nowrap;text-align:center;transform:translateX(-2%)}
 .masthead nav{display:flex;align-items:center;gap:clamp(.75rem,2.6vw,2rem)}
 .navlink{font-size:.85rem;color:var(--navy);text-decoration:none;letter-spacing:.01em;padding:.35rem 0;border-bottom:1px solid transparent;white-space:nowrap}
 .navlink:hover,.navlink:focus-visible{border-bottom-color:var(--rose)}
@@ -248,9 +248,31 @@ details p{padding:0 0 1.6rem;color:var(--ink-soft);max-width:64ch}
 .closing .btn{margin-top:2.3rem}
 .closing .small{font-size:.87rem;color:rgba(253,249,245,.58);margin-top:1.6rem;max-width:48ch}
 
-footer{background:var(--navy-deep);color:rgba(253,249,245,.58);padding:2.7rem 0;font-size:.83rem}
-footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2.5rem;justify-content:space-between}
-footer a{color:rgba(253,249,245,.75)}
+footer{background:var(--navy-deep);color:rgba(253,249,245,.6);padding:clamp(3rem,6vw,4.5rem) 0 2.5rem;font-size:.87rem}
+footer a{color:rgba(253,249,245,.78);text-decoration:none}
+footer a:hover,footer a:focus-visible{color:var(--cream)}
+.foot-cols{display:grid;gap:2.5rem}
+@media(min-width:820px){.foot-cols{grid-template-columns:1fr 1fr 1.5fr;gap:3.5rem}}
+.foot-col h3{font-family:var(--display);font-weight:400;font-size:1.15rem;color:var(--cream);margin:0 0 1rem}
+.foot-col a{display:block;padding:.42rem 0}
+.foot-note{color:rgba(253,249,245,.6);font-size:.83rem;margin:0 0 1rem;max-width:42ch}
+#contact-form input,#contact-form textarea{
+  width:100%;font-family:var(--body);font-size:.88rem;color:var(--cream);
+  background:rgba(253,249,245,.07);border:1px solid rgba(253,249,245,.2);border-radius:8px;
+  padding:.7rem .85rem;margin-bottom:.6rem;
+}
+#contact-form input::placeholder,#contact-form textarea::placeholder{color:rgba(253,249,245,.45)}
+#contact-form input:focus,#contact-form textarea:focus{outline:none;border-color:var(--cta);background:rgba(253,249,245,.1)}
+#contact-form textarea{resize:vertical;min-height:5rem}
+.foot-send{background:var(--cta);color:#fff;border:none;border-radius:999px;padding:.75rem 1.8rem;font-family:var(--body);font-size:.86rem;font-weight:500;cursor:pointer;transition:background .18s}
+.foot-send:hover:not(:disabled){background:var(--cta-hover)}
+.foot-send:disabled{opacity:.55;cursor:not-allowed}
+.foot-status{font-size:.82rem;margin:.7rem 0 0;min-height:1.2em}
+.foot-status.ok{color:#8FCBA6}
+.foot-status.err{color:#E9A9A0}
+.foot-legal{margin-top:3rem;padding-top:1.6rem;border-top:1px solid rgba(253,249,245,.14);font-size:.79rem;color:rgba(253,249,245,.5);max-width:70ch}
+.sr-only{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 
 /* ---------- mobile ---------- */
 @media(max-width:700px){
@@ -406,7 +428,7 @@ footer a{color:rgba(253,249,245,.75)}
           <div class="step-ord">Two</div>
           <div>
             <h3>Interview</h3>
-            <p>Forty-five minutes on video with your matchmaker. This is where a settled position separates from an open one, and it's the reason membership costs what it does. We ask about decision history, about how it has held up under pressure, and about the choices you've actually made around it. Nothing medical is asked, recorded or kept.</p>
+            <p>Thirty minutes on a call with your matchmaker. This is where a settled position separates from an open one, and it's the reason membership costs what it does. We ask about decision history, about how it has held up under pressure, and about the choices you've actually made around it. Nothing medical is asked, recorded or kept.</p>
           </div>
         </div>
         <div class="step">
@@ -452,7 +474,7 @@ footer a{color:rgba(253,249,245,.75)}
               <th scope="row">Who checks it's settled</th>
               <td>Nobody</td>
               <td>Nobody</td>
-              <td class="col-us">A matchmaker, in a 45-minute interview</td>
+              <td class="col-us">A matchmaker, in a 30-minute interview</td>
             </tr>
             <tr>
               <th scope="row">Applicants declined</th>
@@ -593,10 +615,47 @@ footer a{color:rgba(253,249,245,.75)}
 
 </main>
 
-<footer>
+<footer id="contact">
   <div class="wrap">
-    <div>The Decided is operated by Sparked Connection Ltd, registered in England and Wales, company number 16967307.</div>
-    <div><a href="#top">Privacy</a> &nbsp; <a href="#top">Terms</a> &nbsp; <a href="#top">Complaints</a></div>
+    <div class="foot-cols">
+
+      <div class="foot-col">
+        <h3>Service</h3>
+        <a href="#who">Who can apply</a>
+        <a href="#how">How it works</a>
+        <a href="#membership">Membership</a>
+        <a href="/form/">Join free</a>
+      </div>
+
+      <div class="foot-col">
+        <h3>Support</h3>
+        <a href="/privacy/">Privacy Notice</a>
+        <a href="/terms/">Terms &amp; Conditions</a>
+        <a href="/refunds/">Refund &amp; Cancellation</a>
+        <a href="/accessibility/">Accessibility</a>
+      </div>
+
+      <div class="foot-col foot-contact">
+        <h3>Get in touch</h3>
+        <p class="foot-note">A question before you apply? Send it here and we will reply within five working days.</p>
+        <form id="contact-form" novalidate>
+          <label class="sr-only" for="c-name">Your name</label>
+          <input type="text" id="c-name" name="name" placeholder="Your name" required>
+          <label class="sr-only" for="c-email">Your email</label>
+          <input type="email" id="c-email" name="email" placeholder="Your email" required>
+          <label class="sr-only" for="c-message">Your message</label>
+          <textarea id="c-message" name="message" rows="3" placeholder="Your message" required></textarea>
+          <div class="hp" aria-hidden="true"><label for="c-website">Website</label><input type="text" id="c-website" name="website" tabindex="-1" autocomplete="off"></div>
+          <button type="submit" class="foot-send" id="contact-send">Send message</button>
+          <p class="foot-status" id="contact-status" role="status"></p>
+        </form>
+      </div>
+
+    </div>
+    <div class="foot-legal">
+      The Decided is operated by Sparked Connection Ltd, registered in England and Wales, company number 16967307.
+      Registered with the Association of British Introduction Agencies.
+    </div>
   </div>
 </footer>
 
@@ -613,6 +672,58 @@ footer a{color:rgba(253,249,245,.75)}
   menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', close); });
   document.addEventListener('keydown', function(e){ if (e.key === 'Escape') close(); });
   window.addEventListener('resize', function(){ if (window.innerWidth >= 880) close(); });
+})();
+
+(function(){
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var btn = document.getElementById('contact-send');
+  var status = document.getElementById('contact-status');
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    status.className = 'foot-status';
+    if (document.getElementById('c-website').value) return;  // honeypot
+
+    var name = form.name.value.trim(),
+        email = form.email.value.trim(),
+        message = form.message.value.trim();
+
+    if (!name || !email || !message) {
+      status.textContent = 'Please fill in all three fields.';
+      status.className = 'foot-status err';
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    try {
+      var res = await fetch('https://formsubmit.co/ajax/hello@sparkedconnection.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          _subject: 'The Decided - website enquiry',
+          _captcha: 'false',
+          name: name,
+          email: email,
+          message: message,
+          source: 'thedecided.co.uk footer'
+        })
+      });
+      if (!res.ok) throw new Error(res.status);
+      form.reset();
+      status.textContent = 'Thank you. We will reply within five working days.';
+      status.className = 'foot-status ok';
+      btn.textContent = 'Sent';
+    } catch (err) {
+      console.error(err);
+      status.textContent = 'Something went wrong. Please email hello@sparkedconnection.com.';
+      status.className = 'foot-status err';
+      btn.disabled = false;
+      btn.textContent = 'Send message';
+    }
+  });
 })();
 </script>
 

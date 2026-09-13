@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
-<link rel="canonical" href="https://thedecided.co.uk/apply/">
+<link rel="canonical" href="https://thedecided.co.uk/form/">
 <title>Apply for membership | The Decided</title>
 <meta name="description" content="Application for membership of The Decided, a human-led introductions service for adults in the UK who are settled on not having children.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +22,8 @@ img{display:block;max-width:100%}
   --navy:#1E3151;
   --navy-deep:#141F35;
   --rose:#CE7E98;
+  --cta:#B2345E;
+  --cta-hover:#962C4F;
   --rose-pale:#F7EBEF;
   --gold:#E6A961;
   --cream:#FDF9F5;
@@ -48,7 +50,7 @@ body{
 .mark{display:flex;flex-direction:column;align-items:stretch;gap:.34rem;text-decoration:none;line-height:1}
 .mark-name{font-family:var(--mark);font-weight:400;font-size:clamp(1.15rem,3.2vw,1.7rem);letter-spacing:.26em;color:var(--navy);margin-right:-.26em}
 .mark-name b{color:var(--rose);font-weight:400}
-.mark-sub{font-family:var(--body);font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-align:center;white-space:nowrap;transform:translateX(-2%)}
+.mark-sub{font-family:var(--body);font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:#C4882F;text-align:center;white-space:nowrap;transform:translateX(-2%)}
 .nav-back{font-size:.82rem;color:var(--ink-soft);text-decoration:none;white-space:nowrap}
 .nav-back:hover{color:var(--rose)}
 
@@ -123,16 +125,24 @@ input[type=radio],input[type=checkbox]{accent-color:var(--rose);width:auto;flex:
 .photo-list{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
 .photo-chip{font-size:.78rem;background:var(--rose-pale);border:1px solid var(--rule);border-radius:999px;padding:.35rem .8rem;color:var(--ink-soft)}
 
+.scale-wrap{margin-top:.6rem}
+.scale-track{display:flex;align-items:center;gap:1rem}
+.scale-track input[type=range]{flex:1;-webkit-appearance:none;appearance:none;height:4px;border-radius:999px;background:var(--rule);padding:0;border:none}
+.scale-track input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:1.25rem;height:1.25rem;border-radius:50%;background:var(--cta);border:none;cursor:pointer}
+.scale-track input[type=range]::-moz-range-thumb{width:1.25rem;height:1.25rem;border-radius:50%;background:var(--cta);border:none;cursor:pointer}
+.scale-value{min-width:2.4rem;text-align:center;font-family:var(--display);font-size:1.3rem;color:var(--navy)}
+.scale-labels{display:flex;justify-content:space-between;font-size:.76rem;color:var(--ink-soft);margin-top:.4rem}
+
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 
 .submit-row{text-align:center;margin-top:2rem}
 .cf-turnstile{display:flex;justify-content:center;margin-bottom:1.4rem}
 .btn-submit{
-  background:var(--rose);color:#fff;border:none;border-radius:999px;
-  font-size:.95rem;font-weight:500;letter-spacing:.02em;padding:1rem 2.8rem;
-  transition:background .18s;
+  background:var(--cta);color:#fff;border:none;border-radius:999px;
+  font-size:.95rem;font-weight:500;letter-spacing:.02em;padding:1.05rem 3.4rem;
+  min-width:16rem;transition:background .18s;
 }
-.btn-submit:hover:not(:disabled){background:#bb6b85}
+.btn-submit:hover:not(:disabled){background:var(--cta-hover)}
 .btn-submit:disabled{opacity:.55;cursor:not-allowed}
 .submit-note{font-size:.8rem;color:var(--ink-soft);margin-top:1rem;max-width:46ch;margin-left:auto;margin-right:auto}
 .error-summary{display:none;background:#FDF3F2;border:1px solid #E5B4AE;color:#8C2F22;border-radius:10px;padding:1rem 1.2rem;font-size:.88rem;margin-bottom:1.5rem}
@@ -663,8 +673,8 @@ footer a{color:rgba(253,249,245,.75)}
       <div class="section-header">
         <div class="section-num">4</div>
         <div class="section-title-block">
-          <h2>Your life</h2>
-          <p>What we would tell someone about you before they meet you.</p>
+          <h2>Lifestyle and personality</h2>
+          <p>What we would tell someone about you before they meet you. Most of this is optional.</p>
         </div>
       </div>
 
@@ -687,28 +697,148 @@ footer a{color:rgba(253,249,245,.75)}
         </div>
       </div>
 
+      <div class="field-group-label">Health &amp; habits</div>
+      <div class="field">
+        <label>Do you smoke? <span class="opt">(Optional)</span></label>
+        <div class="radio-pills">
+          <label class="radio-pill"><input type="radio" name="smoking" value="Non-smoker"> Non-smoker</label>
+          <label class="radio-pill"><input type="radio" name="smoking" value="Social smoker"> Social smoker</label>
+          <label class="radio-pill"><input type="radio" name="smoking" value="Smoker"> Smoker</label>
+          <label class="radio-pill"><input type="radio" name="smoking" value="Vaper"> Vaper</label>
+          <label class="radio-pill"><input type="radio" name="smoking" value="Prefer not to say"> Prefer not to say</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Do you drink alcohol? <span class="opt">(Optional)</span></label>
+        <div class="radio-pills">
+          <label class="radio-pill"><input type="radio" name="alcohol" value="No"> No</label>
+          <label class="radio-pill"><input type="radio" name="alcohol" value="Occasionally"> Occasionally</label>
+          <label class="radio-pill"><input type="radio" name="alcohol" value="Yes"> Yes</label>
+          <label class="radio-pill"><input type="radio" name="alcohol" value="Prefer not to say"> Prefer not to say</label>
+        </div>
+      </div>
+
       <div class="grid-2">
         <div class="field">
-          <label>Drinking <span class="opt">(Optional)</span></label>
-          <select name="drinking">
+          <label>How often do you exercise? <span class="opt">(Optional)</span></label>
+          <select name="exercise">
             <option value="">Select</option>
             <option>Never</option>
-            <option>Occasionally</option>
-            <option>Socially</option>
-            <option>Regularly</option>
+            <option>Rarely (once a month or less)</option>
+            <option>Occasionally (a few times a month)</option>
+            <option>Regularly (1-2 times a week)</option>
+            <option>Often (3-4 times a week)</option>
+            <option>Daily</option>
           </select>
         </div>
         <div class="field">
-          <label>Smoking <span class="opt">(Optional)</span></label>
-          <select name="smoking">
+          <label>Describe your diet <span class="opt">(Optional)</span></label>
+          <select name="diet">
             <option value="">Select</option>
-            <option>Never</option>
-            <option>Socially</option>
-            <option>Regularly</option>
-            <option>Vape only</option>
+            <option>No restrictions / Omnivore</option>
+            <option>Flexitarian</option>
+            <option>Pescatarian</option>
+            <option>Vegetarian</option>
+            <option>Vegan</option>
+            <option>Halal</option>
+            <option>Kosher</option>
+            <option>Gluten-free</option>
+            <option>Other</option>
           </select>
         </div>
       </div>
+
+      <div class="field-group-label">Religion &amp; spirituality</div>
+      <div class="field">
+        <label>Religion or spirituality <span class="opt">(Optional)</span></label>
+        <select name="religion">
+          <option value="">Prefer not to say</option>
+          <option>Christian</option>
+          <option>Catholic</option>
+          <option>Jewish</option>
+          <option>Muslim</option>
+          <option>Hindu</option>
+          <option>Buddhist</option>
+          <option>Sikh</option>
+          <option>Spiritual but not religious</option>
+          <option>Agnostic</option>
+          <option>Atheist</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>How important is religion or spirituality to you? <span class="opt">(Optional)</span></label>
+        <p class="hint">1 = not important at all, 10 = very important</p>
+        <div class="scale-wrap">
+          <div class="scale-track">
+            <input type="range" name="religion_importance" min="1" max="10" value="5"
+                   oninput="document.getElementById('rel-val').textContent=this.value">
+            <div class="scale-value" id="rel-val">5</div>
+          </div>
+          <div class="scale-labels"><span>Not important</span><span>Very important</span></div>
+        </div>
+      </div>
+
+      <div class="field-group-label">Personality &amp; values</div>
+      <div class="field">
+        <label>How introverted or extraverted are you? <span class="opt">(Optional)</span></label>
+        <p class="hint">1 = quiet night in, 10 = social butterfly</p>
+        <div class="scale-wrap">
+          <div class="scale-track">
+            <input type="range" name="introvert_extravert" min="1" max="10" value="5"
+                   oninput="document.getElementById('intro-val').textContent=this.value">
+            <div class="scale-value" id="intro-val">5</div>
+          </div>
+          <div class="scale-labels"><span>Quiet night in</span><span>Social butterfly</span></div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Which of these best describes your values? <span class="opt">(Optional)</span></label>
+        <div class="check-grid">
+          <label class="check-item"><input type="checkbox" name="values" value="Family-first"> Family-first</label>
+          <label class="check-item"><input type="checkbox" name="values" value="Career-driven"> Career-driven</label>
+          <label class="check-item"><input type="checkbox" name="values" value="Adventure &amp; travel"> Adventure &amp; travel</label>
+          <label class="check-item"><input type="checkbox" name="values" value="Health &amp; wellbeing"> Health &amp; wellbeing</label>
+          <label class="check-item"><input type="checkbox" name="values" value="Creativity &amp; the arts"> Creativity &amp; the arts</label>
+          <label class="check-item"><input type="checkbox" name="values" value="Intellectual curiosity"> Intellectual curiosity</label>
+          <label class="check-item"><input type="checkbox" name="values" value="Community &amp; giving back"> Community &amp; giving back</label>
+          <label class="check-item"><input type="checkbox" name="values" value="Financial security"> Financial security</label>
+          <label class="check-item"><input type="checkbox" name="values" value="Spirituality &amp; faith"> Spirituality &amp; faith</label>
+          <label class="check-item"><input type="checkbox" name="values" value="Independence"> Independence</label>
+          <label class="check-item"><input type="checkbox" name="values" value="Loyalty &amp; commitment"> Loyalty &amp; commitment</label>
+          <label class="check-item"><input type="checkbox" name="values" value="Fun &amp; spontaneity"> Fun &amp; spontaneity</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>What are your hobbies and interests? <span class="opt">(Optional)</span></label>
+        <div class="check-grid">
+          <label class="check-item"><input type="checkbox" name="hobbies" value="Cooking &amp; food"> Cooking &amp; food</label>
+          <label class="check-item"><input type="checkbox" name="hobbies" value="Travel &amp; exploring"> Travel &amp; exploring</label>
+          <label class="check-item"><input type="checkbox" name="hobbies" value="Fitness &amp; sport"> Fitness &amp; sport</label>
+          <label class="check-item"><input type="checkbox" name="hobbies" value="Reading &amp; books"> Reading &amp; books</label>
+          <label class="check-item"><input type="checkbox" name="hobbies" value="Music"> Music</label>
+          <label class="check-item"><input type="checkbox" name="hobbies" value="Art &amp; creativity"> Art &amp; creativity</label>
+          <label class="check-item"><input type="checkbox" name="hobbies" value="Film &amp; theatre"> Film &amp; theatre</label>
+          <label class="check-item"><input type="checkbox" name="hobbies" value="Dining out &amp; wine"> Dining out &amp; wine</label>
+          <label class="check-item"><input type="checkbox" name="hobbies" value="Outdoors &amp; nature"> Outdoors &amp; nature</label>
+          <label class="check-item"><input type="checkbox" name="hobbies" value="Yoga &amp; mindfulness"> Yoga &amp; mindfulness</label>
+          <label class="check-item"><input type="checkbox" name="hobbies" value="Gaming"> Gaming</label>
+          <label class="check-item"><input type="checkbox" name="hobbies" value="Volunteering &amp; charity"> Volunteering &amp; charity</label>
+          <label class="check-item"><input type="checkbox" name="hobbies" value="Running &amp; cycling"> Running &amp; cycling</label>
+          <label class="check-item"><input type="checkbox" name="hobbies" value="Languages &amp; culture"> Languages &amp; culture</label>
+          <label class="check-item"><input type="checkbox" name="hobbies" value="Photography"> Photography</label>
+          <label class="check-item"><input type="checkbox" name="hobbies" value="Dancing"> Dancing</label>
+        </div>
+        <div class="field" style="margin-top:1rem;margin-bottom:0;">
+          <label>Anything else? <span class="opt">(Optional)</span></label>
+          <input type="text" name="hobbies_other" placeholder="e.g. sailing, pottery, stand-up comedy&hellip;">
+        </div>
+      </div>
+
 
     </div>
 
@@ -935,8 +1065,8 @@ footer a{color:rgba(253,249,245,.75)}
       </div>
 
       <div class="field">
-        <label>How did you hear about us? <span class="opt">(Optional)</span></label>
-        <select name="referral_source">
+        <label>How did you hear about us? <span class="req">*</span></label>
+        <select name="referral_source" required>
           <option value="">Select</option>
           <option>Google or another search engine</option>
           <option>Instagram</option>
@@ -959,14 +1089,14 @@ footer a{color:rgba(253,249,245,.75)}
   <div id="success-panel">
     <div class="tick">&#10003;</div>
     <h2>Your application has been received</h2>
-    <p>Thank you for taking the time. Anna reads every application personally and will come back to you within five working days, whatever the answer.</p>
-    <p>If you are accepted, the next step is a 45-minute conversation on video, arranged at a time that suits you.</p>
+    <p>Thank you for taking the time. Every application is read personally, and we will be in contact within five working days, whatever the answer.</p>
+    <p>If you are accepted, the next step is a 30-minute call, arranged at a time that suits you.</p>
   </div>
 </div>
 
 <footer>
   The Decided is operated by Sparked Connection Ltd, registered in England and Wales, company number 16967307.
-  &nbsp;<a href="/privacy/">Privacy</a> &nbsp;<a href="/terms/">Terms</a>
+  &nbsp;<a href="/privacy/">Privacy</a> &nbsp;<a href="/terms/">Terms</a> &nbsp;<a href="/refunds/">Refunds</a> &nbsp;<a href="/accessibility/">Accessibility</a>
 </footer>
 
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>

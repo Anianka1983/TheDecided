@@ -13,6 +13,8 @@
   --navy:#1E3151;
   --navy-deep:#141F35;
   --rose:#CE7E98;
+  --cta:#B2345E;
+  --cta-hover:#962C4F;
   --rose-pale:#F7EBEF;
   --gold:#E6A961;
   --cream:#FDF9F5;
@@ -60,8 +62,8 @@ p:last-child{margin-bottom:0}
 .masthead nav{display:flex;align-items:center;gap:clamp(.75rem,2.6vw,2rem)}
 .navlink{font-size:.85rem;color:var(--navy);text-decoration:none;letter-spacing:.01em;padding:.35rem 0;border-bottom:1px solid transparent;white-space:nowrap}
 .navlink:hover,.navlink:focus-visible{border-bottom-color:var(--rose)}
-.navlink.cta{background:var(--rose);color:#fff;border-radius:999px;padding:.62rem 1.4rem;border-bottom:none;font-weight:500}
-.navlink.cta:hover,.navlink.cta:focus-visible{background:#bb6b85;border-bottom-color:transparent}
+.navlink.cta{background:var(--cta);color:#fff;border-radius:999px;padding:.62rem 1.5rem;border-bottom:none;font-weight:500}
+.navlink.cta:hover,.navlink.cta:focus-visible{background:var(--cta-hover);border-bottom-color:transparent}
 .navlink.wide{display:none}
 @media(min-width:880px){.navlink.wide{display:inline-block}}
 
@@ -84,16 +86,16 @@ p:last-child{margin-bottom:0}
   display:block;padding:1.05rem .2rem;color:var(--navy);text-decoration:none;
   font-size:1.02rem;border-bottom:1px solid var(--rule);
 }
-.mobile-menu a:last-child{border-bottom:none;color:var(--rose);font-weight:500}
+.mobile-menu a:last-child{border-bottom:none;color:var(--cta);font-weight:500}
 
 .btn{display:inline-block;font-size:.9rem;font-weight:500;letter-spacing:.03em;text-decoration:none;
   padding:.95rem 1.8rem;border:1px solid transparent;transition:background .18s,color .18s,border-color .18s}
-.btn-rose{background:var(--rose);color:#fff}
-.btn-rose:hover,.btn-rose:focus-visible{background:#bb6b85}
+.btn-rose{background:var(--cta);color:#fff}
+.btn-rose:hover,.btn-rose:focus-visible{background:var(--cta-hover)}
 .btn-line{border-color:rgba(253,249,245,.42);color:var(--cream)}
 .btn-line:hover,.btn-line:focus-visible{border-color:var(--cream);background:rgba(253,249,245,.09)}
-.btn-navy{background:var(--navy);color:var(--cream)}
-.btn-navy:hover,.btn-navy:focus-visible{background:var(--navy-deep)}
+.btn-navy{background:var(--cta);color:#fff}
+.btn-navy:hover,.btn-navy:focus-visible{background:var(--cta-hover)}
 .btn-navyline{border-color:var(--navy);color:var(--navy)}
 .btn-navyline:hover,.btn-navyline:focus-visible{background:var(--navy);color:var(--cream)}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
@@ -124,6 +126,8 @@ p:last-child{margin-bottom:0}
 .hero h1 em{font-style:italic;color:var(--gold)}
 .hero .lede{font-size:clamp(1.05rem,1.55vw,1.22rem);color:rgba(253,249,245,.84);max-width:42ch;margin-top:2.1rem;line-height:1.6}
 .hero .actions{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:2.6rem}
+.hero .actions .btn,.closing .btn{padding:1.05rem 2.4rem;text-align:center}
+.hero .actions .btn-rose,.closing .btn-rose{min-width:16rem;font-size:.95rem}
 
 .eligibar{margin-top:clamp(3rem,6vw,4.8rem);border-top:1px solid rgba(230,169,97,.4);display:grid;gap:0}
 @media(min-width:860px){.eligibar{grid-template-columns:repeat(2,1fr)}}
@@ -278,7 +282,7 @@ footer a{color:rgba(253,249,245,.75)}
       <a class="navlink wide" href="#who">Who can apply</a>
       <a class="navlink wide" href="#how">How it works</a>
       <a class="navlink wide" href="#membership">Membership</a>
-      <a class="navlink cta" href="/apply/">Apply</a>
+      <a class="navlink cta" href="/form/">Join free</a>
       <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -289,7 +293,7 @@ footer a{color:rgba(253,249,245,.75)}
       <a href="#who">Who can apply</a>
       <a href="#how">How it works</a>
       <a href="#membership">Membership</a>
-      <a href="/apply/">Apply for membership</a>
+      <a href="/form/">Join free</a>
     </div>
   </div>
 </header>
@@ -306,7 +310,7 @@ footer a{color:rgba(253,249,245,.75)}
       <h1 class="reveal d1">Introductions for childfree people whose minds are <em>already</em> made up.</h1>
       <p class="lede reveal d2">A human-led introductions service for adults in the UK who have made a settled, permanent decision not to have children. Every applicant is interviewed by a person before they join, and not everyone is accepted.</p>
       <div class="actions reveal d3">
-        <a class="btn btn-rose" href="/apply/">Apply for membership</a>
+        <a class="btn btn-rose" href="/form/">Join free</a>
         <a class="btn btn-line" href="#how">How the vetting works</a>
       </div>
 
@@ -394,8 +398,8 @@ footer a{color:rgba(253,249,245,.75)}
         <div class="step">
           <div class="step-ord">One</div>
           <div>
-            <h3>Apply</h3>
-            <p>A short written application. Ten minutes. You tell us where you stand, how long you've stood there, and what your life looks like now.</p>
+            <h3>Join free</h3>
+            <p>A short written application, about fifteen minutes. You tell us where you stand, how long you've stood there, and what your life looks like now.</p>
           </div>
         </div>
         <div class="step">
@@ -490,7 +494,7 @@ footer a{color:rgba(253,249,245,.75)}
             <li>Briefing call before, debrief after</li>
             <li>One pause of up to twelve months</li>
           </ul>
-          <a class="btn btn-navy" href="/apply/">Apply for membership</a>
+          <a class="btn btn-navy" href="/form/">Join free</a>
         </div>
 
         <div class="tier">
@@ -503,7 +507,7 @@ footer a{color:rgba(253,249,245,.75)}
             <li>Every candidate interviewed and screened before you hear of them</li>
             <li>Priority scheduling and direct access to your matchmaker</li>
           </ul>
-          <a class="btn btn-navyline" href="/apply/">Apply for membership</a>
+          <a class="btn btn-navyline" href="/form/">Join free</a>
         </div>
       </div>
 
@@ -512,7 +516,7 @@ footer a{color:rgba(253,249,245,.75)}
           <h3>The Register <span class="price-inline">£195</span></h3>
           <p>Twelve months. The same application, interview and verification, and a place in the matched pool. You'll be considered for introductions and contacted when we see a fit, but no active search is carried out for you. This is the way in if you're open to meeting someone without being in a hurry.</p>
         </div>
-        <a class="btn btn-rose" href="/apply/">Join the register</a>
+        <a class="btn btn-rose" href="/form/">Join the register</a>
       </div>
 
       <p class="tiernote">Introduction numbers are an upper limit, not a promise. We won't sell you a search membership if we can't currently see viable people for you, and we'll tell you so before you pay.</p>
@@ -582,7 +586,7 @@ footer a{color:rgba(253,249,245,.75)}
     <div class="wrap">
       <h2>You've explained yourself enough times</h2>
       <p>Applications take about fifteen minutes. If we don't think we can help you yet, we'll say so, and we won't take your money in the meantime.</p>
-      <a class="btn btn-rose" href="/apply/">Apply for membership</a>
+      <a class="btn btn-rose" href="/form/">Join free</a>
       <p class="small">Applying is free. There's no obligation and no automatic enrolment. We reply to every application within five working days.</p>
     </div>
   </section>

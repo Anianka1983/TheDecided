@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://thedecided.co.uk/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://thedecided.co.uk/journal/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://thedecided.co.uk/journal/childfree-vs-childless/</loc><lastmod>2026-09-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://thedecided.co.uk/privacy-notice/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://thedecided.co.uk/terms-and-conditions/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://thedecided.co.uk/refund-and-cancellation-policy/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>

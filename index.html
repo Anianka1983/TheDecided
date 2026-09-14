@@ -254,6 +254,11 @@ tbody .col-us{color:var(--cream);border-bottom-color:rgba(253,249,245,.18)}
 .entry p{color:rgba(253,249,245,.8);font-size:.95rem;max-width:62ch;margin:.55rem 0 0}
 .tiernote{margin-top:1.7rem;font-size:.88rem;color:var(--ink-soft);max-width:62ch}
 
+.portrait{margin:1.9rem 0 0;padding:0;max-width:19rem}
+.portrait img{width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--rule)}
+.portrait figcaption{margin-top:.8rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+@media(max-width:920px){.portrait{max-width:15rem}}
+
 .creds{list-style:none;margin:2.5rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.55rem}
 .creds li{border:1px solid var(--rule);padding:.5rem .95rem;font-size:.82rem;color:var(--ink-soft)}
 .sig{font-family:var(--display);font-style:italic;font-size:1.7rem;color:var(--rose);margin-top:1.8rem}
@@ -797,7 +802,15 @@ footer a:hover,footer a:focus-visible{color:var(--cream)}
 
   <section class="section section-white">
     <div class="wrap split">
-      <h2>You'll be working with Anna</h2>
+      <div>
+        <h2>You'll be working with Anna</h2>
+        <figure class="portrait">
+          <img src="/images/anna.jpg"
+               alt="Anna Lewandowska, matchmaker and founder of The Decided"
+               loading="lazy" decoding="async">
+          <figcaption>Anna Lewandowska &middot; Matchmaker</figcaption>
+        </figure>
+      </div>
       <div class="prose">
         <p>I'm Anna Lewandowska, a certified matchmaker registered with the Association of British Introduction Agencies and on the Matchmaking Institute Certified Register.</p>
         <p>Long before this was my job, I was the person friends came to when they wanted introducing to someone. I did it informally for years alongside a career in project management and sales, and enough of those introductions worked that I eventually stopped treating it as a hobby. What pushed me to do it properly was watching capable, interesting people lose years to apps that were never built to help them find anyone.</p>

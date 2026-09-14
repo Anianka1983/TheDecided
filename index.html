@@ -324,6 +324,18 @@ tbody .col-us{color:var(--cream);border-bottom-color:rgba(253,249,245,.18)}
   .portrait{max-width:22rem}
 }
 
+.jrnl-grid{display:grid;gap:1.1rem;margin-top:2.6rem}
+@media(min-width:820px){.jrnl-grid{grid-template-columns:1fr 1fr}}
+.jrnl-card{display:block;background:var(--cream);border:1px solid var(--rule);border-radius:12px;padding:1.6rem 1.7rem;text-decoration:none;transition:border-color .18s}
+.jrnl-card:hover{border-color:var(--rose)}
+.jrnl-card.soon{opacity:.62}
+.jrnl-meta{display:block;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#C4882F;margin-bottom:.6rem}
+.jrnl-card strong{display:block;font-family:var(--display);font-weight:400;font-size:1.45rem;line-height:1.18;color:var(--navy)}
+.jrnl-sub{display:block;font-size:.95rem;color:var(--ink-soft);margin-top:.6rem}
+.jrnl-more{display:block;font-size:.85rem;color:var(--cta);margin-top:1rem;font-weight:500}
+.jrnl-all{margin-top:1.6rem;font-size:.92rem}
+.jrnl-all a{color:var(--cta);text-decoration:underline;text-underline-offset:3px}
+
 .creds{list-style:none;margin:2.5rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.55rem}
 .creds li{border:1px solid var(--rule);padding:.5rem .95rem;font-size:.82rem;color:var(--ink-soft)}
 .sig{font-family:var(--display);font-style:italic;font-size:1.7rem;color:var(--rose);margin-top:1.8rem}
@@ -619,6 +631,7 @@ footer a:hover,footer a:focus-visible{color:var(--cream)}
       <a class="navlink wide" href="#who">Who can apply</a>
       <a class="navlink wide" href="#how">How it works</a>
       <a class="navlink wide" href="#membership">Membership</a>
+      <a class="navlink wide" href="/journal/">Journal</a>
       <a class="navlink cta" href="/form/">Join free</a>
       <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -630,6 +643,7 @@ footer a:hover,footer a:focus-visible{color:var(--cream)}
       <a href="#who">Who can apply</a>
       <a href="#how">How it works</a>
       <a href="#membership">Membership</a>
+      <a href="/journal/">Journal</a>
       <a href="/form/">Join free</a>
     </div>
   </div>
@@ -942,6 +956,33 @@ footer a:hover,footer a:focus-visible{color:var(--cream)}
     </div>
   </section>
 
+  <section class="section section-white" id="journal">
+    <div class="wrap">
+      <div class="split">
+        <h2>From the Journal</h2>
+        <div class="prose">
+          <p>Writing for people who already know. Plain answers to the questions childfree people actually get asked, without the assumption that anyone is going to come round.</p>
+        </div>
+      </div>
+
+      <div class="jrnl-grid">
+        <a class="jrnl-card" href="/journal/childfree-vs-childless/">
+          <span class="jrnl-meta">15 September 2026 &middot; 6 min read</span>
+          <strong>Childfree or childless: why the difference matters</strong>
+          <span class="jrnl-sub">Two words, used interchangeably, describing completely different experiences. What each one means, and why it matters in dating.</span>
+          <span class="jrnl-more">Read the article &rarr;</span>
+        </a>
+        <div class="jrnl-card soon">
+          <span class="jrnl-meta">Coming soon</span>
+          <strong>How to tell if someone is childfree or just not ready yet</strong>
+          <span class="jrnl-sub">A settled answer and an agreeable one sound identical on a first date. The questions that tell them apart.</span>
+        </div>
+      </div>
+
+      <p class="jrnl-all"><a href="/journal/">All articles &rarr;</a></p>
+    </div>
+  </section>
+
   <section class="closing grain" id="apply">
     <div class="wrap">
       <h2>You've explained yourself enough times</h2>
@@ -962,6 +1003,7 @@ footer a:hover,footer a:focus-visible{color:var(--cream)}
         <a href="#who">Who can apply</a>
         <a href="#how">How it works</a>
         <a href="#membership">Membership</a>
+        <a href="/journal/">Journal</a>
         <a href="/form/">Join free</a>
       </div>
 

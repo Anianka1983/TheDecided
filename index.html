@@ -167,15 +167,24 @@ p:last-child{margin-bottom:0}
 .elig p{font-size:.9rem;line-height:1.58;color:rgba(253,249,245,.72);margin-top:.5rem}
 
 .abia{
-  display:inline-flex;align-items:center;gap:.7rem;text-decoration:none;
-  border:1px solid rgba(230,169,97,.45);border-radius:999px;
-  padding:.5rem 1.1rem .5rem .6rem;margin:0 0 1.5rem;width:max-content;
-  transition:border-color .18s,background .18s;
+  display:inline-flex;flex-direction:column;align-items:center;gap:.6rem;
+  text-decoration:none;width:max-content;margin:0 0 1.6rem;
 }
-.abia img{width:2.1rem;height:2.1rem;flex:none}
-.abia span{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(253,249,245,.75);line-height:1.3}
-.abia:hover,.abia:focus-visible{border-color:rgba(230,169,97,.9);background:rgba(230,169,97,.1)}
-@media(min-width:1000px){.abia{position:absolute;top:.2rem;right:var(--gut);margin:0}}
+.abia img{
+  width:5.4rem;height:5.4rem;flex:none;
+  filter:drop-shadow(0 0 10px rgba(230,169,97,.65)) drop-shadow(0 0 26px rgba(230,169,97,.38));
+  transition:filter .25s ease,transform .25s ease;
+}
+.abia span{
+  font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(230,169,97,.92);text-align:center;max-width:9rem;line-height:1.4;
+}
+.abia:hover img,.abia:focus-visible img{
+  filter:drop-shadow(0 0 14px rgba(230,169,97,.85)) drop-shadow(0 0 34px rgba(230,169,97,.5));
+  transform:translateY(-2px);
+}
+@media(min-width:1000px){.abia{position:absolute;top:0;right:var(--gut);margin:0}}
+@media(max-width:999px){.abia img{width:4.2rem;height:4.2rem}}
 .badge{display:inline-flex;align-items:center;gap:.95rem;margin:0 0 2.2rem;text-decoration:none;width:max-content}
 .badge-label{font-size:.68rem;letter-spacing:.17em;text-transform:uppercase;color:rgba(253,249,245,.72);transition:color .18s}
 .badge:hover .badge-label,.badge:focus-visible .badge-label{color:var(--cream)}
@@ -265,11 +274,23 @@ tbody .col-us{color:var(--cream);border-bottom-color:rgba(253,249,245,.18)}
 .tiernote{margin-top:1.7rem;font-size:.88rem;color:var(--ink-soft);max-width:62ch}
 
 .anna-head{max-width:none;margin-bottom:2.2rem}
-.anna-split{align-items:start}
-.portrait{margin:0;padding:0;max-width:19rem}
-.portrait img{width:100%;height:auto;display:block;border-radius:10px;border:1px solid var(--rule)}
-.portrait figcaption{margin-top:.8rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
-@media(max-width:920px){.portrait{max-width:15rem}}
+.anna-split{align-items:stretch}
+.portrait{position:relative;margin:0;padding:0;max-width:none;height:100%;min-height:26rem}
+.portrait img{
+  width:100%;height:100%;min-height:26rem;object-fit:cover;object-position:50% 25%;
+  display:block;border-radius:14px;border:1px solid var(--rule);
+}
+.portrait-card{
+  position:absolute;left:50%;transform:translateX(-50%);bottom:1.3rem;
+  background:#fff;border-radius:10px;box-shadow:0 8px 24px rgba(30,49,81,.2);
+  padding:.75rem 1.6rem;text-align:center;min-width:62%;
+}
+.pc-name{display:block;font-family:var(--display);font-size:1.2rem;color:var(--navy);line-height:1.1}
+.pc-role{display:block;font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--cta);margin-top:.25rem}
+@media(max-width:920px){
+  .portrait,.portrait img{min-height:22rem}
+  .portrait{max-width:22rem}
+}
 
 .creds{list-style:none;margin:2.5rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.55rem}
 .creds li{border:1px solid var(--rule);padding:.5rem .95rem;font-size:.82rem;color:var(--ink-soft)}
@@ -592,9 +613,9 @@ footer a:hover,footer a:focus-visible{color:var(--cream)}
   <section class="hero grain">
     <div class="hero-media"><img src="/images/banner.jpg" alt="" width="2000" height="849" fetchpriority="high"></div>
     <div class="wrap">
-      <a class="abia reveal" href="/terms/" aria-label="Registered with the Association of British Introduction Agencies">
-        <img src="/images/abia-badge.svg" alt="" width="40" height="40" aria-hidden="true">
-        <span>ABIA<br>registered</span>
+      <a class="abia reveal" href="/terms/" aria-label="Registered and approved by the Association of British Introduction Agencies">
+        <img src="/images/abia-badge.svg" alt="" width="96" height="96" aria-hidden="true">
+        <span>ABIA registered &amp; approved</span>
       </a>
       <a class="badge reveal" href="https://www.sparkedconnection.com" target="_blank" rel="noopener">
         <span class="badge-label">In partnership with</span>
@@ -824,9 +845,12 @@ footer a:hover,footer a:focus-visible{color:var(--cream)}
       <div>
         <figure class="portrait">
           <img src="/images/anna.jpg"
-               alt="Anna, matchmaker and founder of The Decided"
+               alt="Anna, founder and lead matchmaker of The Decided"
                loading="lazy" decoding="async">
-          <figcaption>Anna &middot; Matchmaker</figcaption>
+          <figcaption class="portrait-card">
+            <span class="pc-name">Anna</span>
+            <span class="pc-role">Founder &amp; Lead Matchmaker</span>
+          </figcaption>
         </figure>
       </div>
       <div class="prose">

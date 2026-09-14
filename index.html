@@ -280,7 +280,9 @@ tbody .col-us{color:var(--cream);border-bottom-color:rgba(253,249,245,.18)}
 @media(min-width:900px){.tiers{grid-template-columns:1fr 1fr}}
 .tier{background:#fff;border:1px solid var(--rule);padding:2.3rem 2.1rem;display:flex;flex-direction:column}
 .tier-lead{border:2px solid var(--navy);position:relative}
+.tier{position:relative}
 .tier-flag{position:absolute;top:0;right:0;background:var(--navy);color:var(--cream);font-size:.74rem;letter-spacing:.08em;padding:.42rem .85rem}
+.tier-flag-alt{background:#C4882F}
 .price{font-family:var(--display);font-size:2.9rem;font-weight:400;line-height:1.05;color:var(--navy);margin:.7rem 0 0}
 .price small{font-family:var(--body);font-size:.85rem;color:var(--ink-soft);display:block;margin-top:.4rem}
 .tier ul{list-style:none;margin:1.6rem 0 0;padding:0;font-size:.95rem}
@@ -436,16 +438,11 @@ footer a:hover,footer a:focus-visible{color:var(--cream)}
     "Matchmaking",
     "Relationship compatibility"
    ],
-   "affiliation": [
-    {
-     "@type": "Organization",
-     "name": "Association of British Introduction Agencies"
-    },
-    {
-     "@type": "Organization",
-     "name": "Matchmaking Institute Certified Register"
-    }
-   ],
+   "affiliation": {
+    "@type": "Organization",
+    "name": "Association of British Introduction Agencies",
+    "alternateName": "ABIA"
+   },
    "sameAs": [
     "https://sparkedconnection.com/"
    ]
@@ -510,18 +507,18 @@ footer a:hover,footer a:focus-visible{color:var(--cream)}
      },
      {
       "@type": "Offer",
-      "name": "Introductions",
-      "price": "1250",
+      "name": "Membership",
+      "price": "1500",
       "priceCurrency": "GBP",
-      "description": "Six months. Up to four curated introductions from the membership, each with a written rationale.",
+      "description": "Twelve months. Five curated introductions, a professional photoshoot, and active search beyond the membership.",
       "url": "https://thedecided.co.uk/#membership"
      },
      {
       "@type": "Offer",
-      "name": "Dedicated Search",
-      "price": "2400",
+      "name": "Bring a Friend Membership",
+      "price": "1300",
       "priceCurrency": "GBP",
-      "description": "Twelve months. Up to eight introductions plus active search beyond the membership.",
+      "description": "Twelve months, per person, when two childfree people join together. Includes a professional photoshoot each. Both are interviewed, assessed and matched separately.",
       "url": "https://thedecided.co.uk/#membership"
      }
     ]
@@ -824,28 +821,29 @@ footer a:hover,footer a:focus-visible{color:var(--cream)}
 
       <div class="tiers">
         <div class="tier tier-lead">
-          <div class="tier-flag">Most members</div>
-          <h3>Introductions</h3>
-          <div class="price">£1,250<small>Six months</small></div>
+          <div class="tier-flag">Individual membership</div>
+          <h3>Membership</h3>
+          <div class="price">&pound;1,500<small>Twelve months</small></div>
           <ul>
             <li>Full application, interview and identity verification</li>
-            <li>Up to four curated introductions from the membership</li>
-            <li>A written rationale for every introduction</li>
+            <li>Five curated introductions over the year</li>
             <li>Briefing call before, debrief after</li>
-            <li>One pause of up to twelve months</li>
+            <li>Active search beyond the membership where we need it</li>
+            <li>A professional photoshoot, included</li>
+            <li>Two pauses of up to twelve months</li>
           </ul>
           <a class="btn btn-navy" href="/form/">Join free</a>
         </div>
 
         <div class="tier">
-          <h3>Dedicated Search</h3>
-          <div class="price">£2,400<small>Twelve months</small></div>
+          <div class="tier-flag tier-flag-alt">Better together</div>
+          <h3>&ldquo;Bring a Friend&rdquo; Membership</h3>
+          <div class="price">&pound;1,300<small>Each, twelve months</small></div>
           <ul>
-            <li>Everything in Introductions</li>
-            <li>Up to eight introductions</li>
-            <li>Active search beyond the membership, into communities and referral networks</li>
-            <li>Every candidate interviewed and screened before you hear of them</li>
-            <li>Priority scheduling and direct access to your matchmaker</li>
+            <li>Everything in Membership, including the photoshoot, for both of you</li>
+            <li>Join with someone else who is childfree and you each pay &pound;200 less</li>
+            <li>You are interviewed, assessed and matched entirely separately</li>
+            <li>Both applications must be accepted for the paired rate to apply</li>
           </ul>
           <a class="btn btn-navyline" href="/form/">Join free</a>
         </div>
@@ -853,13 +851,13 @@ footer a:hover,footer a:focus-visible{color:var(--cream)}
 
       <div class="entry">
         <div>
-          <h3>The Register <span class="price-inline">£195</span></h3>
+          <h3>The Register <span class="price-inline">&pound;195</span></h3>
           <p>Twelve months. The same application, interview and verification, and a place in the matched pool. You'll be considered for introductions and contacted when we see a fit, but no active search is carried out for you. This is the way in if you're open to meeting someone without being in a hurry.</p>
         </div>
         <a class="btn btn-rose" href="/form/">Join the register</a>
       </div>
 
-      <p class="tiernote">Introduction numbers are an upper limit, not a promise. We won't sell you a search membership if we can't currently see viable people for you, and we'll tell you so before you pay.</p>
+      <p class="tiernote">We use reasonable endeavours to provide five introductions during your year, subject to suitable people being available and to your own responsiveness. If we fall short through no fault of yours, we extend your membership at no cost until we have met it. The &ldquo;Bring a Friend&rdquo; rate exists because two serious people in the pool is better for everyone, not because you are joining as a pair, and if one application is declined the other keeps their place at the standard rate. We won't sell you a membership if we can't currently see viable people for you, and we'll tell you so before you pay.</p>
     </div>
   </section>
 
@@ -880,14 +878,13 @@ footer a:hover,footer a:focus-visible{color:var(--cream)}
         </figure>
       </div>
       <div class="prose">
-        <p>I'm Anna, a certified matchmaker registered with the Association of British Introduction Agencies and on the Matchmaking Institute Certified Register.</p>
+        <p>I'm Anna, a certified matchmaker registered with the Association of British Introduction Agencies.</p>
         <p>Long before this was my job, I was the person friends came to when they wanted introducing to someone. I did it informally for years alongside a career in project management and sales, and enough of those introductions worked that I eventually stopped treating it as a hobby. What pushed me to do it properly was watching capable, interesting people lose years to apps that were never built to help them find anyone.</p>
-        <p>I built The Decided because a particular group of my members had a problem no filter could solve. They didn't need help meeting people. They needed help establishing, before the third date rather than after the second year, that the person across the table meant the same thing they did.</p>
-        <p>I interview every applicant myself. I also decline applicants myself, which is the part of the job that makes the rest of it worth paying for.</p>
+        <p>I built The Decided because it is the service I wanted myself. I'm childfree too, and I know how quickly the pool narrows as you get older, when most of the people you meet either already have children or quietly assume you'll come round. It isn't a preference you can work around. It shapes your week, your money, your plans and the whole shape of the life you're building, and finding someone who has built the same thing is genuinely hard.</p>
+        <p>I interview every applicant myself, so I know everyone in my network personally rather than as a row in a database. That's why, when I propose an introduction, I can tell you exactly why I've made it: what you have in common, where you differ, and what I think you should know before you meet.</p>
         <p class="sig">Anna</p>
         <ul class="creds">
           <li>ABIA registered</li>
-          <li>Matchmaking Institute Certified Register</li>
           <li>Every applicant personally interviewed</li>
           <li>UK based, GDPR compliant</li>
         </ul>

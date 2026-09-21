@@ -183,13 +183,15 @@ p:last-child{margin-bottom:0}
 .hero .actions .btn,.closing .btn{padding:1.05rem 2.4rem;text-align:center}
 .hero .actions .btn-rose,.closing .btn-rose{min-width:16rem;font-size:.95rem}
 
-.eligibar{margin-top:clamp(3rem,6vw,4.8rem);border-top:1px solid rgba(230,169,97,.4);display:grid;gap:0}
+.eligibar{margin-top:clamp(3rem,6vw,4.8rem);display:grid;gap:0;background:rgba(20,31,53,.66);border-radius:.85rem;padding:.3rem 1.5rem;border-top:1px solid rgba(230,169,97,.4)}
 @media(min-width:860px){.eligibar{grid-template-columns:repeat(2,1fr)}}
-.elig{padding:1.6rem 0;border-bottom:1px solid rgba(253,249,245,.12)}
+.elig{padding:1.6rem 0;border-bottom:1px solid rgba(253,249,245,.14)}
+.elig:last-child{border-bottom:none}
 @media(min-width:860px){
-  .elig{padding:1.7rem 2rem 1.7rem 0;border-bottom:none;border-right:1px solid rgba(253,249,245,.12)}
-  .elig:last-child{border-right:none;padding-right:0}
-  .elig+.elig{padding-left:2rem}
+  .elig{padding:1.7rem 2rem;border-bottom:none;border-right:1px solid rgba(253,249,245,.14)}
+  .elig:last-child{border-right:none}
+  .elig:first-child{padding-left:0}
+  .elig:last-child{padding-right:0}
 }
 .elig h3{font-size:1.2rem;color:var(--gold);text-shadow:0 1px 14px rgba(20,31,53,.7),0 1px 3px rgba(20,31,53,.6)}
 .elig p{font-size:.9rem;line-height:1.58;color:rgba(253,249,245,.72);margin-top:.5rem;text-shadow:0 1px 10px rgba(20,31,53,.5)}

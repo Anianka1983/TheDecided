@@ -147,22 +147,23 @@ p:last-child{margin-bottom:0}
   color:var(--cream);
   padding:clamp(2.4rem,5.5vw,4.2rem) 0 clamp(3.5rem,7vw,6rem);
   overflow:hidden;
+  min-height:38rem;
 }
 .hero-media{position:absolute;inset:0;z-index:0;background:var(--navy)}
 .hero-media picture{display:block;width:100%;height:100%}
-.hero-media img{width:100%;height:100%;object-fit:cover;object-position:28% 62%;display:block}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:34% 22%;display:block}
 .hero-media::after{
   content:"";position:absolute;inset:0;
   background:
-    linear-gradient(to right,rgba(20,31,53,.95) 0%,rgba(20,31,53,.89) 30%,rgba(20,31,53,.55) 62%,rgba(20,31,53,.34) 100%),
-    linear-gradient(to bottom,rgba(20,31,53,.55) 0%,rgba(20,31,53,0) 30%);
+    linear-gradient(to right,rgba(20,31,53,.82) 0%,rgba(20,31,53,.7) 30%,rgba(20,31,53,.32) 62%,rgba(20,31,53,.16) 100%),
+    linear-gradient(to bottom,rgba(20,31,53,.3) 0%,rgba(20,31,53,0) 30%);
 }
 @media(max-width:760px){
   /* full-bleed behind the text, exactly as desktop */
-  .hero{padding-top:2rem;padding-bottom:2.6rem}
-  .hero-media img{width:100%;height:100%;object-fit:cover;object-position:32% 8%}
+  .hero{padding-top:2rem;padding-bottom:2.6rem;min-height:44rem}
+  .hero-media img{width:100%;height:100%;object-fit:cover;object-position:60% 10%}
   .hero-media::after{
-    background:linear-gradient(to bottom,rgba(20,31,53,.3) 0%,rgba(20,31,53,.42) 26%,rgba(20,31,53,.6) 52%,rgba(20,31,53,.75) 100%);
+    background:linear-gradient(to bottom,rgba(20,31,53,.18) 0%,rgba(20,31,53,.32) 26%,rgba(20,31,53,.55) 52%,rgba(20,31,53,.72) 100%);
   }
   .hero h1{font-size:clamp(2.2rem,8.6vw,3rem)}
   .hero .lede{font-size:1rem;margin-top:1.5rem}
@@ -286,12 +287,16 @@ thead .col-us{color:var(--gold);font-weight:500}
 tbody .col-us{color:var(--cream);border-bottom-color:rgba(253,249,245,.18)}
 
 .tiers{display:grid;gap:1.1rem;margin-top:3rem}
-@media(min-width:900px){.tiers{grid-template-columns:1fr 1fr}}
+@media(min-width:700px){.tiers{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.tiers{grid-template-columns:1fr 1fr 1fr}}
 .tier{background:#fff;border:1px solid var(--rule);padding:2.3rem 2.1rem;display:flex;flex-direction:column}
 .tier-lead{border:2px solid var(--navy);position:relative}
 .tier{position:relative}
 .tier-flag{position:absolute;top:0;right:0;background:var(--navy);color:var(--cream);font-size:.74rem;letter-spacing:.08em;padding:.42rem .85rem}
 .tier-flag-alt{background:#C4882F}
+.tier-flag-limited{background:var(--cta)}
+.tier-free{border-color:var(--cta)}
+.tier-free .price{color:var(--cta)}
 .price{font-family:var(--display);font-size:2.9rem;font-weight:400;line-height:1.05;color:var(--navy);margin:.7rem 0 0}
 .price small{font-family:var(--body);font-size:.85rem;color:var(--ink-soft);display:block;margin-top:.4rem}
 .tier ul{list-style:none;margin:1.6rem 0 0;padding:0;font-size:.95rem}
@@ -523,7 +528,7 @@ footer a:hover,footer a:focus-visible{color:var(--cream)}
       "name": "The Register",
       "price": "0",
       "priceCurrency": "GBP",
-      "description": "Free. Application, interview and identity verification, and a place in the matched pool. Considered for introductions to paying members; no bespoke search is carried out.",
+      "description": "Free for a limited time. Application, interview and identity verification, and a place in the matched pool. Considered for introductions to paying members; no bespoke search is carried out.",
       "url": "https://thedecided.co.uk/#membership"
      },
      {
@@ -655,7 +660,7 @@ footer a:hover,footer a:focus-visible{color:var(--cream)}
     <div class="hero-media">
       <picture>
         <source media="(max-width: 760px)" srcset="/images/banner-mobile.jpg" width="1000" height="1800">
-        <img src="/images/banner.jpg" alt="" width="2000" height="1143" fetchpriority="high">
+        <img src="/images/banner.jpg" alt="" width="2000" height="1255" fetchpriority="high">
       </picture>
     </div>
     <div class="wrap">
@@ -873,17 +878,23 @@ footer a:hover,footer a:focus-visible{color:var(--cream)}
           </ul>
           <a class="btn btn-navyline" href="/form/">Join free</a>
         </div>
-      </div>
 
-      <div class="entry">
-        <div>
-          <h3>The Register <span class="price-inline">Free</span></h3>
-          <p>The same application, interview and identity verification as our paid tiers, at no cost. There's no bespoke search carried out on your behalf, but you'll be considered whenever we're matching for one of our paying members, and we'll contact you if we see a genuine fit. This is the way in if you'd rather be found than actively searched for.</p>
+        <div class="tier tier-free">
+          <div class="tier-flag tier-flag-limited">For a limited time only</div>
+          <h3>The Register</h3>
+          <div class="price">Free<small>Ongoing</small></div>
+          <ul>
+            <li>Full application, interview and identity verification</li>
+            <li>A place in the matched pool</li>
+            <li>Considered whenever we're matching for a paying member</li>
+            <li>No bespoke search carried out on your behalf</li>
+            <li>No professional photoshoot included</li>
+          </ul>
+          <a class="btn btn-rose" href="/form/">Join the register</a>
         </div>
-        <a class="btn btn-rose" href="/form/">Join the register</a>
       </div>
 
-      <p class="tiernote">We use reasonable endeavours to provide five introductions during your year, subject to suitable people being available and to your own responsiveness. If we fall short through no fault of yours, we extend your membership at no cost until we have met it. The &ldquo;Bring a Friend&rdquo; rate exists because two serious people in the pool is better for everyone, not because you are joining as a pair, and if one application is declined the other keeps their place at the standard rate. We won't sell you a membership if we can't currently see viable people for you, and we'll tell you so before you pay.</p>
+      <p class="tiernote">We use reasonable endeavours to provide five introductions during your year, subject to suitable people being available and to your own responsiveness. If we fall short through no fault of yours, we extend your membership at no cost until we have met it. The &ldquo;Bring a Friend&rdquo; rate exists because two serious people in the pool is better for everyone, not because you are joining as a pair, and if one application is declined the other keeps their place at the standard rate. The Register is free for a limited time; we'll announce any change to that in good time and it won't affect anyone already on it. We won't sell you a membership if we can't currently see viable people for you, and we'll tell you so before you pay.</p>
     </div>
   </section>
 
